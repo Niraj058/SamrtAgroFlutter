@@ -139,11 +139,11 @@ class LoginPageState extends State<LoginPage> {
                       username: _username.toString().toLowerCase().trim(),
                       password: _password.toString().trim(),
                     )
-                        .then((result) {
+                      .then((result) {
                       if (result) {
                       } else {
                         setState(() => this._status = 'rejected');
-                        showAlertPopup(context, 'Info', _auth.errorMessage);
+                        showAlertPopup(context, 'Error!!', _auth.errorMessage);
                       }
                       // if (!globals.isBioSetup) {
                       //   setState(() {

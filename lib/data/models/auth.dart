@@ -127,16 +127,18 @@ class AuthModel extends ChangeNotifier {
     String _username = username;
     String _password = password;
 
-    // TODO: API LOGIN CODE HERE
+    if(_username == "niraj" || _username == "kiran" || _username == "varun" || _username == "madhur"){
+      if(_password=="123456"){
     await Future.delayed(Duration(seconds: 3));
     print("Logging In => $_username, $_password");
-
+    
     if (_rememberMe) {
       SharedPreferences.getInstance().then((prefs) {
         prefs.setString("saved_username", _username);
       });
     }
 
+    
     // Get Info For User
     User _newUser = await getInfo(uuid.v4().toString());
     if (_newUser != null) {
@@ -152,6 +154,12 @@ class AuthModel extends ChangeNotifier {
 
     if (_newUser?.token == null || _newUser.token.isEmpty) return false;
     return true;
+      }
+    }
+    else{
+      errorMessage = 'Check username or password';
+    return false;
+    }
   }
 
   Future<void> logout() async {

@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login/constants.dart';
-import 'package:flutter_login/data/models/auth.dart';
-import 'package:flutter_login/ui/app/Weather.dart';
+import 'package:flutter_app/constants.dart';
+import 'package:flutter_app/data/models/auth.dart';
 import 'package:provider/provider.dart';
-
-import 'Soil.dart';
 import 'Soil.dart';
 
 class AppDrawer extends StatelessWidget {
@@ -28,9 +25,9 @@ class AppDrawer extends StatelessWidget {
                 textScaleFactor: textScaleFactor,
                 maxLines: 1,
               ),
-              // onTap: () {
-              //   Navigator.of(context).popAndPushNamed("/myaccount");
-              // },
+               onTap: () {
+                 Navigator.of(context).popAndPushNamed("/myaccount");
+               },
             ),
              Divider(),
             ListTile(
@@ -40,8 +37,8 @@ class AppDrawer extends StatelessWidget {
                 textScaleFactor: textScaleFactor,
               ),
               onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context){  return Weather();
-            }));
+                 Navigator.of(context).popAndPushNamed("/weather");  
+                 print("Break 0");
               },
             ),
             ListTile(

@@ -26,7 +26,7 @@ class InputField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+  
     return (new Container(
       margin: new EdgeInsets.only(bottom: 10.0),
       child: new DecoratedBox(

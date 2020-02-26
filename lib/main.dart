@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_login/data/models/auth.dart';
+import 'package:flutter_app/data/models/auth.dart';
+import 'package:flutter_app/ui/app/weather_main.dart';
 import 'package:persist_theme/persist_theme.dart';
 import 'package:provider/provider.dart';
 
@@ -51,10 +52,12 @@ class _MyAppState extends State<MyApp> {
             }),
             routes: <String, WidgetBuilder>{
               "/login": (BuildContext context) => LoginPage(),
+              "/myaccount": (BuildContext context) => Home(),
               "/menu": (BuildContext context) => Home(),
               "/home": (BuildContext context) => Home(),
               "/settings": (BuildContext context) => SettingsPage(),
               "/create": (BuildContext context) => CreateAccount(),
+              "/weather": (BuildContext context) => WeatherScreen(),
             },
           ),
         ));
