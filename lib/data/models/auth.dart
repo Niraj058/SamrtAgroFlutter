@@ -127,6 +127,7 @@ class AuthModel extends ChangeNotifier {
     String _username = username;
     String _password = password;
 
+   
     if(_username == "niraj" || _username == "kiran" || _username == "varun" || _username == "madhur"){
       if(_password=="123456"){
     await Future.delayed(Duration(seconds: 3));
@@ -156,10 +157,8 @@ class AuthModel extends ChangeNotifier {
     return true;
       }
     }
-    else{
-      errorMessage = 'Check username or password';
+    errorMessage = 'Check username or password';
     return false;
-    }
   }
 
   Future<void> logout() async {

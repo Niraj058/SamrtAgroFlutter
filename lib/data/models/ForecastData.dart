@@ -13,7 +13,7 @@ class ForecastData {
       WeatherData w = new WeatherData(
           date: new DateTime.fromMillisecondsSinceEpoch(e['dt'] * 1000, isUtc: false),
           name: json['city']['name'],
-          temp: e['main']['temp'].toDouble(),
+          temp: (((e['main']['temp'])-32*5)/9).toInt(),
           main: e['weather'][0]['main'],
           icon: e['weather'][0]['icon']);
       list.add(w);

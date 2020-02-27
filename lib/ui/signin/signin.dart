@@ -145,31 +145,11 @@ class LoginPageState extends State<LoginPage> {
                         setState(() => this._status = 'rejected');
                         showAlertPopup(context, 'Error!!', _auth.errorMessage);
                       }
-                      // if (!globals.isBioSetup) {
-                      //   setState(() {
-                      //     print('Bio No Longer Setup');
-                      //   });
-                      // }
                       _scaffoldKey.currentState.hideCurrentSnackBar();
                     });
                   }
                 },
               ),
-              // trailing: !globals.isBioSetup
-              //     ? null
-              //     : NativeButton(
-              //         child: Icon(
-              //           Icons.fingerprint,
-              //           color: Colors.white,
-              //         ),
-              //         color: Colors.redAccent[400],
-              //         onPressed: globals.isBioSetup
-              //             ? loginWithBio
-              //             : () {
-              //                 globals.Utility.showAlertPopup(context, 'Info',
-              //                     "Please Enable in Settings after you Login");
-              //               },
-              //       ),
             ),
             FlatButton(
               child: Text(

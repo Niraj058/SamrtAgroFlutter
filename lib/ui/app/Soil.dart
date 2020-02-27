@@ -59,7 +59,7 @@ class _MyHomePageState extends State<Soil> {
     if (data == null || data.length < 1) {
       return Container(
         child: Center(
-          child: Text("Please wait..."),
+          child: CircularProgressIndicator(),
         ),
       );
     }

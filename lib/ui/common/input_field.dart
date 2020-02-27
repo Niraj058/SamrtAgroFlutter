@@ -11,7 +11,7 @@ class InputField extends StatelessWidget {
     this.validateFunction,
     this.onSaved,
     this.iconColor,
-    this.textFieldColor,
+    this.textFieldColor, double bottomMargin,
   });
 
   final IconData icon;

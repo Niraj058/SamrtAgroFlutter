@@ -2,7 +2,7 @@
 class WeatherData {
   final DateTime date;
   final String name;
-  final double temp;
+  final int temp;
   final String main;
   final String icon;
 
@@ -12,7 +12,7 @@ class WeatherData {
     return WeatherData(
       date: new DateTime.fromMillisecondsSinceEpoch(json['dt'] * 1000, isUtc: false),
       name: json['name'],
-      temp: json['main']['temp'].toDouble(),
+      temp: (((json['main']['temp'])-32*5)/9).toInt(),
       main: json['weather'][0]['main'],
       icon: json['weather'][0]['icon'],
     );

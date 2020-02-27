@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/data/models/auth.dart';
 import 'package:flutter_app/ui/app/weather_main.dart';
+import 'package:flutter_app/ui/common/Weather.dart';
 import 'package:persist_theme/persist_theme.dart';
 import 'package:provider/provider.dart';
 
@@ -47,7 +48,7 @@ class _MyAppState extends State<MyApp> {
             debugShowCheckedModeBanner: false,
             theme: model.theme,
             home: Consumer<AuthModel>(builder: (context, model, child) {
-              if (model?.user != null) return Home();
+              if (model?.user != null) return WeatherScreen();
               return LoginPage();
             }),
             routes: <String, WidgetBuilder>{

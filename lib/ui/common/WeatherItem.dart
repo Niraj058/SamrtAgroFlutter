@@ -16,12 +16,12 @@ class WeatherItem extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text(weather.name, style: new TextStyle(color: Colors.black)),
-            Text(weather.main, style: new TextStyle(color: Colors.black, fontSize: 24.0)),
-            Text('${weather.temp.toString()}°F',  style: new TextStyle(color: Colors.black)),
+            Text(weather.name),
+            Text(weather.main, style: new TextStyle( fontSize: 16.0)),
+            Text('${weather.temp.toString()}°C',style: new TextStyle( fontSize: 24.0)),
             Image.network('https://openweathermap.org/img/w/${weather.icon}.png'),
-            Text(new DateFormat.yMMMd().format(weather.date), style: new TextStyle(color: Colors.black)),
-            Text(new DateFormat.Hm().format(weather.date), style: new TextStyle(color: Colors.black)),
+            Text(new DateFormat.yMMMd().format(weather.date)),
+            Text(new DateFormat.Hm().format(weather.date)),
           ],
         ),
       ),

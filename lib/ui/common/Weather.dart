@@ -11,12 +11,12 @@ class Weather extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
-        Text(weather.name, style: new TextStyle(color: Colors.white)),
-        Text(weather.main, style: new TextStyle(color: Colors.white, fontSize: 32.0)),
-        Text('${weather.temp.toString()}°F',  style: new TextStyle(color: Colors.white)),
+        Text(weather.name),
+        Text(weather.main, style: new TextStyle(fontSize: 29.0)),
+        Text('${weather.temp.toString()}°C',style: new TextStyle(fontSize: 50.0)),
         Image.network('https://openweathermap.org/img/w/${weather.icon}.png'),
-        Text(new DateFormat.yMMMd().format(weather.date), style: new TextStyle(color: Colors.white)),
-        Text(new DateFormat.Hm().format(weather.date), style: new TextStyle(color: Colors.white)),
+        Text(new DateFormat.yMMMd().format(weather.date)),
+        Text(new DateFormat.Hm().format(weather.date)),
       ],
     );
   }

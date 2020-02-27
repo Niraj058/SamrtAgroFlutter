@@ -89,7 +89,7 @@ class CreateAccountState extends State<CreateAccount> {
                     title: TextFormField(
                       decoration: InputDecoration(labelText: 'District'),
                       validator: (val) =>
-                          val.length < 3 ? 'District Required' : null,
+                          val.length < 1 ? 'District Required' : null,
                       onSaved: (val) => _dist = val,
                       obscureText: true,
                       controller: _controllerDist,
@@ -100,7 +100,7 @@ class CreateAccountState extends State<CreateAccount> {
                     title: TextFormField(
                       decoration: InputDecoration(labelText: 'State'),
                       validator: (val) =>
-                          val.length < 3 ? 'State Required' : null,
+                          val.length < 1 ? 'State Required' : null,
                       onSaved: (val) => _state = val,
                       obscureText: true,
                       controller: _controllerState,
