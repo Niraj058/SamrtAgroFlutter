@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/ui/app/app_drawer.dart';
 import 'package:http/http.dart' as http;
 import 'package:location/location.dart';
 import 'package:flutter/services.dart';
@@ -50,6 +51,7 @@ class MyAppState extends State<WeatherScreen> {
       appBar: AppBar(
         title: Text("Weather Info"),
       ),
+      drawer: AppDrawer(),
       body: Center(
           child: Column(
             mainAxisSize: MainAxisSize.min,
@@ -99,6 +101,7 @@ class MyAppState extends State<WeatherScreen> {
   loadWeather() async {
     setState(() {
       isLoading = true;
+      CircularProgressIndicator();
     });
 
     var location;

@@ -138,8 +138,7 @@ class AuthModel extends ChangeNotifier {
         prefs.setString("saved_username", _username);
       });
     }
-
-    
+   
     // Get Info For User
     User _newUser = await getInfo(uuid.v4().toString());
     if (_newUser != null) {

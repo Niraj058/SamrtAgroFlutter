@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
+import 'app_drawer.dart';
+
 void main() => runApp(Soil());
 
 class Soil extends StatefulWidget {
@@ -49,6 +51,7 @@ class _MyHomePageState extends State<Soil> {
       appBar: AppBar(
         title: Text("Soil Info"),
       ),
+      drawer: AppDrawer(),
       body: Center(
         child: getList(),
       ),
