@@ -4,7 +4,7 @@ import 'package:flutter_app/ui/app/weather_main.dart';
 import 'package:persist_theme/persist_theme.dart';
 import 'package:provider/provider.dart';
 
-import 'ui/lockedscreen/home.dart';
+import 'ui/lockedscreen/profile.dart';
 import 'ui/lockedscreen/settings.dart';
 import 'ui/signin/newaccount.dart';
 import 'ui/signin/signin.dart';

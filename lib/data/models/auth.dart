@@ -74,7 +74,7 @@ class AuthModel extends ChangeNotifier {
       User _savedUser;
       try {
         String _saved = _prefs.getString("user_data");
-        print("Saved: $_saved");
+        //print("Saved: $_saved");
         _savedUser = User.fromJson(json.decode(_saved));
       } catch (e) {
         print("User Not Found: $e");
@@ -131,7 +131,7 @@ class AuthModel extends ChangeNotifier {
     if(_username == "niraj" || _username == "kiran" || _username == "varun" || _username == "madhur"){
       if(_password=="123456"){
     await Future.delayed(Duration(seconds: 3));
-    print("Logging In => $_username, $_password");
+    //print("Logging In => $_username, $_password");
     
     if (_rememberMe) {
       SharedPreferences.getInstance().then((prefs) {

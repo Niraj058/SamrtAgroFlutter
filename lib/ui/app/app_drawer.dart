@@ -33,7 +33,7 @@ class AppDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.cloud),
               title: Text(
-                "Weather",
+                "Weather Forcast",
                 textScaleFactor: textScaleFactor,
               ),
               onTap: () {
@@ -44,7 +44,7 @@ class AppDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.local_florist),
               title: Text(
-                "Soil",
+                "Soil Info",
                 textScaleFactor: textScaleFactor,
               ),
               onTap: () {
