@@ -28,7 +28,7 @@ class SettingsPage extends StatelessWidget {
               height: 10.0,
             ),
             if (!kIsWeb)
-              ListTile(
+             /* ListTile(
                 leading: Icon(Icons.fingerprint),
                 title: Text(
                   'Enable Biometrics',
@@ -51,7 +51,7 @@ class SettingsPage extends StatelessWidget {
             Divider(
               height: 20.0,
             ),
-            ListTile(
+           */ ListTile(
               leading: Icon(Icons.account_box),
               title: Text(
                 'Stay Logged In',
