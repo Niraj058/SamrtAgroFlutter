@@ -132,12 +132,16 @@ class AuthModel extends ChangeNotifier {
       if(_password=="123456"){
     await Future.delayed(Duration(seconds: 3));
     //print("Logging In => $_username, $_password");
+
     
     if (_rememberMe) {
       SharedPreferences.getInstance().then((prefs) {
         prefs.setString("saved_username", _username);
-      });
-    }
+      });  
+    }  
+    errorMessage = 'Check username or password';
+        }
+      }
    
     // Get Info For User
     User _newUser = await getInfo(uuid.v4().toString());
@@ -154,10 +158,7 @@ class AuthModel extends ChangeNotifier {
 
     if (_newUser?.token == null || _newUser.token.isEmpty) return false;
     return true;
-      }
-    }
-    errorMessage = 'Check username or password';
-    return false;
+   
   }
 
   Future<void> logout() async {
