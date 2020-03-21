@@ -16,11 +16,11 @@ void main() => runApp(WeatherScreen());
 class WeatherScreen extends StatefulWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Weather Data',
+      title: 'Weather Forcast',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: WeatherScreen(title: 'Weather'),
+      home: WeatherScreen(title: 'Weather Forcast'),
     );
   }
   WeatherScreen({Key key, this.title}) : super(key: key);
@@ -49,7 +49,7 @@ class MyAppState extends State<WeatherScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Weather Info"),
+        title: Text("Weather Forcast"),
       ),
       drawer: AppDrawer(),
       body: Center(

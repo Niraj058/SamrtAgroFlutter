@@ -10,7 +10,7 @@ class AppDrawer extends StatelessWidget {
     final _auth = Provider.of<AuthModel>(context, listen: true);
     return Drawer(
       child: SafeArea(
-        // color: Colors.grey[50],
+        //color: Colors.grey[50],
         child: ListView(
           children: <Widget>[
             ListTile(
@@ -31,6 +31,17 @@ class AppDrawer extends StatelessWidget {
             ),
              Divider(),
             ListTile(
+              leading: Icon(Icons.home),
+              title: Text(
+                "Home",
+                textScaleFactor: textScaleFactor,
+              ),
+              onTap: () {
+                 Navigator.of(context).popAndPushNamed("/home");  
+                 print("Break 0");
+              },
+            ), 
+            ListTile(
               leading: Icon(Icons.cloud),
               title: Text(
                 "Weather Forcast",
@@ -38,7 +49,6 @@ class AppDrawer extends StatelessWidget {
               ),
               onTap: () {
                  Navigator.of(context).popAndPushNamed("/weather");  
-                 print("Break 0");
               },
             ),
             ListTile(
