@@ -84,16 +84,16 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: <Widget>[
                   Expanded(
                     child: UseCard(
-                      routeId: "/setting",
+                      routeId: "/news",
                       cardChild: UseCardChild(
-                        childIcon: 'assets/settings.png',
-                        childText: "Setting",
+                        childIcon: 'assets/news.png',
+                        childText: "News",
                       ),
                     ),
                   ),
                   Expanded(
                     child: UseCard(
-                     // routeId: SuggestionScreen.id,
+                      routeId: "/myaccount",
                       cardChild: UseCardChild(
                         childIcon: 'assets/avatar.png',
                         childText: "Profile",

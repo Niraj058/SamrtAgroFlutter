@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/data/models/auth.dart';
 import 'package:flutter_app/ui/app/Soil.dart';
 import 'package:flutter_app/ui/app/home_screen.dart';
+import 'package:flutter_app/ui/app/loading_screen.dart';
 import 'package:flutter_app/ui/app/weather_main.dart';
+import 'package:flutter_app/ui/lockedscreen/splash_screen.dart';
 import 'package:persist_theme/persist_theme.dart';
 import 'package:provider/provider.dart';
 
@@ -49,10 +51,11 @@ class _MyAppState extends State<MyApp> {
             debugShowCheckedModeBanner: false,
             theme: model.theme,
             home: Consumer<AuthModel>(builder: (context, model, child) {
-              if (model?.user != null) return HomeScreen();
+              if (model?.user != null) return SplashScreen();
               return LoginPage();
             }),
             routes: <String, WidgetBuilder>{
+              "/main": (BuildContext context) => MyApp(),
               "/login": (BuildContext context) => LoginPage(),
               "/myaccount": (BuildContext context) => Home(),
               "/menu": (BuildContext context) => Home(),
@@ -61,6 +64,7 @@ class _MyAppState extends State<MyApp> {
               "/create": (BuildContext context) => CreateAccount(),
               "/weather": (BuildContext context) => WeatherScreen(),
               "/soil":(BuildContext context) => Soil(),
+              "/news":(BuildContext context) => LoadingScreen(),
             },
           ),
         ));

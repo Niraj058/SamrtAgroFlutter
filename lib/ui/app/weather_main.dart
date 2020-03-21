@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:flutter_app/ui/app/app_drawer.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:http/http.dart' as http;
 import 'package:location/location.dart';
 import 'package:flutter/services.dart';
@@ -66,10 +67,11 @@ class MyAppState extends State<WeatherScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: isLoading ? CircularProgressIndicator(
-                        strokeWidth: 2.0,
-                        valueColor: new AlwaysStoppedAnimation(Colors.white),
-                      ) : IconButton(
+                      child: isLoading ? Center(
+                        child: SpinKitDoubleBounce(
+                          color: Colors.blue ,
+                          size: 100.0,
+                      )): IconButton(
                         icon: new Icon(Icons.refresh),
                         tooltip: 'Refresh',
                         onPressed: loadWeather,

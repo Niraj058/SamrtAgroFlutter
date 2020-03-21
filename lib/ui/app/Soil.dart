@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'dart:async';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -62,7 +63,10 @@ class _MyHomePageState extends State<Soil> {
     if (data == null || data.length < 1) {
       return Container(
         child: Center(
-          child: CircularProgressIndicator(),
+          child: SpinKitDoubleBounce(
+          color: Colors.blue , 
+          size: 100.0,
+        ),
         ),
       );
     }
