@@ -63,6 +63,16 @@ class AppDrawer extends StatelessWidget {
               },
             ),
             ListTile(
+              leading: Icon(Icons.public),
+              title: Text(
+                "NEWS",
+                textScaleFactor: textScaleFactor,
+              ),
+              onTap: () {
+                 Navigator.of(context).popAndPushNamed("/news");  
+              },
+            ),
+            ListTile(
               leading: Icon(Icons.settings),
               title: Text(
                 'Settings',
