@@ -15,7 +15,7 @@ class AuthModel extends ChangeNotifier {
   String errorMessage = "";
 
   bool _rememberMe = false;
-  bool _stayLoggedIn = true;
+  bool _stayLoggedIn = true ;
   bool _useBio = false;
   User _user;
 
@@ -137,6 +137,7 @@ class AuthModel extends ChangeNotifier {
     if (_rememberMe) {
       SharedPreferences.getInstance().then((prefs) {
         prefs.setString("saved_username", _username);
+        prefs.setString("saved_password", _password);
       });  
     }  
     errorMessage = 'Check username or password';
