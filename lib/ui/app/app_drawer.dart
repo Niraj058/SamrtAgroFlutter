@@ -65,7 +65,7 @@ class AppDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.public),
               title: Text(
-                "NEWS",
+                "News",
                 textScaleFactor: textScaleFactor,
               ),
               onTap: () {

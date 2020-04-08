@@ -28,7 +28,7 @@ class NewsListState extends State<NewsList> {
 
   ListTile _buildItemsForListView(BuildContext context, int index) {
       return ListTile(
-        title: _newsArticles[index].urlToImage == null ? Image.asset(Constants.NEWS_PLACEHOLDER_IMAGE_ASSET_URL) : Image.network(_newsArticles[index].urlToImage), 
+        title: _newsArticles[index].urlToImage == null ? Image.asset(Constants.news_image) : Image.network(_newsArticles[index].urlToImage), 
         subtitle: Text(_newsArticles[index].title, style: TextStyle(fontSize: 18)),
       );
   }
