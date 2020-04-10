@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:persist_theme/persist_theme.dart';
@@ -26,7 +28,7 @@ class SettingsPage extends StatelessWidget {
               height: 10.0,
             ),
             if (!kIsWeb)
-             /* ListTile(
+              ListTile(
                 leading: Icon(Icons.fingerprint),
                 title: Text(
                   'Enable Biometrics',
@@ -49,7 +51,7 @@ class SettingsPage extends StatelessWidget {
             Divider(
               height: 20.0,
             ),
-           */ ListTile(
+           ListTile(
               leading: Icon(Icons.account_box),
               title: Text(
                 'Stay Logged In',

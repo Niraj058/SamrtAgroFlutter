@@ -6,10 +6,9 @@ void main() => runApp(News());
 
 class News extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "News",
-      home: NewsList()
+    return Scaffold(
+      body: (
+        NewsList()),
     );
   }
 

@@ -16,12 +16,14 @@ class AppDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(Icons.account_circle),
               title: Text(
-                _auth.user.firstname + " " + _auth.user.lastname,
+                //_auth.user.firstname + " " + _auth.user.lastname,
+                "Niraj Shah",
                 textScaleFactor: textScaleFactor,
                 maxLines: 1,
               ),
               subtitle: Text(
-                _auth.user.id.toString(),
+                //_auth.user.id.toString(),
+                "12",
                 textScaleFactor: textScaleFactor,
                 maxLines: 1,
               ),

@@ -60,7 +60,7 @@ class _MyAppState extends State<MyApp> {
               "/myaccount": (BuildContext context) => Home(),
               "/menu": (BuildContext context) => Home(),
               "/home": (BuildContext context) => HomeScreen(),
-              "/setting": (BuildContext context) => SettingsPage(),
+              "/settings": (BuildContext context) => SettingsPage(),
               "/create": (BuildContext context) => CreateAccount(),
               "/weather": (BuildContext context) => WeatherScreen(),
               "/soil":(BuildContext context) => Soil(),

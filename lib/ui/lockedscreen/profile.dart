@@ -55,7 +55,8 @@ class Home extends StatelessWidget {
               subtitle: _auth?.user?.id == null
                   ? null
                   : Text(
-                      _auth?.user?.id.toString() ?? "",
+                      //_auth?.user?.id.toString() ??
+                       "12",
                     ),
             ),
             ListTile(
@@ -63,7 +64,8 @@ class Home extends StatelessWidget {
               subtitle: _auth?.user?.firstname == null
                   ? null
                   : Text(
-                      _auth?.user?.firstname.toString() ?? "",
+                      //_auth?.user?.firstname.toString() ?? 
+                      "Niraj",
                     ),
             ),
             ListTile(
@@ -71,7 +73,8 @@ class Home extends StatelessWidget {
               subtitle: _auth?.user?.lastname == null
                   ? null
                   : Text(
-                      _auth?.user?.lastname.toString() ?? "",
+                      //_auth?.user?.lastname.toString() ?? 
+                      "Shah",
                     ),
             ),
       ],

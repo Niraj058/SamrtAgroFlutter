@@ -6,10 +6,9 @@ void main() => runApp(Soil());
 
 class Soil extends StatelessWidget {
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Soil Data",
-      home: SoilList()
+    return Scaffold(
+      body: (
+        SoilList()),
     );
   }
 
