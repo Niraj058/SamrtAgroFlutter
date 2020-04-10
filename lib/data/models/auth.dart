@@ -159,7 +159,6 @@ class AuthModel extends ChangeNotifier {
 
     if (_newUser?.token == null || _newUser.token.isEmpty) return false;
     return true;
-   
   }
 
   Future<void> logout() async {

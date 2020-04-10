@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/data/models/auth.dart';
-import 'package:flutter_app/ui/app/Soil.dart';
+import 'package:flutter_app/ui/app/Soil_main.dart';
 import 'package:flutter_app/ui/app/home_screen.dart';
-import 'package:flutter_app/ui/app/news.dart';
+import 'package:flutter_app/ui/app/news_main.dart';
 import 'package:flutter_app/ui/app/weather_main.dart';
 import 'package:flutter_app/ui/lockedscreen/splash_screen.dart';
 import 'package:persist_theme/persist_theme.dart';
@@ -67,6 +67,7 @@ class _MyAppState extends State<MyApp> {
               "/news":(BuildContext context) => News(),
             },
           ),
-        ));
+        )),
+    );
   }
 }
