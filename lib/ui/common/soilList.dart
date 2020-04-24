@@ -4,9 +4,7 @@ import 'package:flutter_app/data/models/soilData.dart';
 import 'package:flutter_app/ui/app/app_drawer.dart';
 import 'package:flutter_app/ui/common/webservice.dart';
 
-
 class SoilDataState extends State<SoilList> {
-
   List<SoilData> _soilInfo = List<SoilData>(); 
 
   @override
@@ -16,13 +14,11 @@ class SoilDataState extends State<SoilList> {
   }
 
   void _populatesoilInfo() {
-   
     Webservice().load(SoilData.all).then((soilInfo) => {
       setState(() => {
         _soilInfo = soilInfo
       })
     });
-
   }
 
   ListTile _buildItemsForListView(BuildContext context, int index) {

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_app/constants.dart';
 import 'package:flutter_app/data/models/auth.dart';
-import 'package:flutter_app/ui/app/Soil_main.dart';
+import 'package:flutter_app/ui/common/soil_table.dart';
 import 'package:provider/provider.dart';
 
 class AppDrawer extends StatelessWidget {
@@ -60,7 +60,7 @@ class AppDrawer extends StatelessWidget {
                 textScaleFactor: textScaleFactor,
               ),
               onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context){  return Soil();
+                  Navigator.of(context).push(MaterialPageRoute<Null>(builder: (BuildContext context){  return TableExample();
             }));
               },
             ),

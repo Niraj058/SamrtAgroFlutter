@@ -36,7 +36,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: <Widget>[
                   Expanded(
                     child: UseCard(
-                      routeId: "/weather",
+                      routeId: "/cam",
                       cardChild: UseCardChild(
                         childIcon: 'assets/weed.png',
                         childText: "Crop Disease",
@@ -45,7 +45,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Expanded(
                     child: UseCard(
-                     // routeId: SuggestionScreen.id,
+                     routeId: "/table",
                       cardChild: UseCardChild(
                         childIcon: 'assets/doubt.png',
                         childText: "Crop Suggestion",
